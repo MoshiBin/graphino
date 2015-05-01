@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
   <a href="javascript:;" id="back">-10 minutes</a>
-  <a href="javascript:;" id="forward">+10 minutes</a><br>
+  <a href="javascript:;" id="forward">+10 minutes</a>
+  <a href="javascript:;" id="zoomOut">Zoom Out</a>
+  <br>
   <img id="graph" src="" alt="">
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -36,6 +39,18 @@
         untilTime = untilTime + 10;
         redrawGraph();
       });
+
+      $("#zoomOut").click(function(e) {
+        e.preventDefault();
+        fromTime = fromTime - 10;
+        redrawGraph();
+      });
+
+      $("#zoomIn").click(function(e) {
+        e.preventDefault();
+        fromTime = fromTime + 10;
+        redrawGraph();
+      };
 
       redrawGraph();
     });
