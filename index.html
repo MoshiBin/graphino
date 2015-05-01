@@ -48,6 +48,7 @@
       var untilTime = 0;
       var bgcolor = null;
       var fgcolor = null;
+      var tickSize = 3; // The amount of minutes to move using the arrows
 
       function redrawGraph() {
         var fromTimeString = fromTime != 0 ? fromTime.toString() + "minutes" : "now";
@@ -65,15 +66,15 @@
 
       $("#back").click(function(e) {
         e.preventDefault();
-        fromTime = fromTime - 10;
-        untilTime = untilTime - 10;
+        fromTime = fromTime - tickSize;
+        untilTime = untilTime - tickSize;
         redrawGraph();
       });
 
       $("#forward").click(function(e) {
         e.preventDefault();
-        fromTime = fromTime + 10;
-        untilTime = untilTime + 10;
+        fromTime = fromTime + tickSize;
+        untilTime = untilTime + tickSize;
         redrawGraph();
       });
 
