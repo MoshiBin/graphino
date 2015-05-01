@@ -1,0 +1,21 @@
+.toolbox {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.toolbox a {
+  color: white;
+}
+
+.graph-area {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+#graph {
+  position: relative;
+  top: 0;
+  left: 0;
+}
