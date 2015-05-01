@@ -4,14 +4,40 @@
   <meta charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+    .toolbox {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+    }
+
+    .toolbox a {
+      color: white;
+    }
+
+    .graph-area {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+
+    #graph {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  </style>
 </head>
 <body>
-  <a href="javascript:;" id="back"><i class="fa fa-backward"></i></a>
-  <a href="javascript:;" id="forward"><i class="fa fa-forward"></i></a>
-  <a href="javascript:;" id="zoomOut"><i class="fa fa-search-minus"></i></a>
-  <a href="javascript:;" id="zoomIn"><i class="fa fa-search-plus"></i></a>
-  <br>
-  <img id="graph" src="" alt="">
+  <div class="graph-area">
+    <img id="graph" src="" alt="">
+    <div class="toolbox">
+      <a href="javascript:;" id="back"><i class="fa fa-backward"></i></a>
+      <a href="javascript:;" id="forward"><i class="fa fa-forward"></i></a>
+      <a href="javascript:;" id="zoomOut"><i class="fa fa-search-minus"></i></a>
+      <a href="javascript:;" id="zoomIn"><i class="fa fa-search-plus"></i></a>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script type="text/javascript">
