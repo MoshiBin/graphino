@@ -9,6 +9,7 @@
   <a href="javascript:;" id="back">-10 minutes</a>
   <a href="javascript:;" id="forward">+10 minutes</a>
   <a href="javascript:;" id="zoomOut">Zoom Out</a>
+  <a href="javascript:;" id="zoomIn">Zoom In</a>
   <br>
   <img id="graph" src="" alt="">
 
@@ -50,7 +51,7 @@
         e.preventDefault();
         fromTime = fromTime + 10;
         redrawGraph();
-      };
+      });
 
       redrawGraph();
     });
