@@ -8,7 +8,12 @@ $(function() {
   var fgcolor = null;
   var tickSize = 3; // The amount of minutes to move using the arrows
 
+  graph.load(function(e) {
+    $(this).next(".toolbox").children(".loader").hide();
+  });
+
   function redrawGraph() {
+    graph.next(".toolbox").children(".loader").show();
     var fromTimeString = fromTime != 0 ? fromTime.toString() + "minutes" : "now";
     var untilTimeString = untilTime != 0 ? untilTime.toString() + "minutes" : "now";
     url = graphUrl + "&from=" + fromTimeString + "&until=" + untilTimeString;
@@ -18,6 +23,9 @@ $(function() {
     if (fgcolor != null) {
       url = url + "&fgcolor=" + fgcolor;
     }
+
+    var now = new Date();
+    url = url + "&cacheBuster=" + now.getTime();
 
     graph.attr("src", graphUrl + "&from=" + fromTimeString + "&until=" + untilTimeString);
   }
