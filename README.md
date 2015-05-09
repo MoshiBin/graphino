@@ -1,6 +1,8 @@
 # graphino
 Lightweight interactive graphite graphs.
 
+![Graphino Demo](/demo.png)
+
 ## Setting up
 * Edit `js/graphino.js` and change `graphUrl` to the endpoint of your Graphite render function.
 * Serve the folder in a web server. For development, you can use python's `SimpleHTTPServer`, like so:
