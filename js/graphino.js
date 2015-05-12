@@ -69,5 +69,12 @@ $(function() {
     redrawGraph();
   });
 
+  $("#fastForward").click(function(e) {
+    e.preventDefault();
+    fromTime = -10;
+    untilTime = 0;
+    redrawGraph();
+  });
+
   redrawGraph();
 });
